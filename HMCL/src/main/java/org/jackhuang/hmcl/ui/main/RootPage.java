@@ -50,6 +50,12 @@ import org.jackhuang.hmcl.util.io.FileUtils;
 import org.jackhuang.hmcl.util.platform.*;
 import org.jetbrains.annotations.Nullable;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import org.jackhuang.hmcl.ui.Controllers;
 import java.nio.file.Path;
 import java.util.Locale;
 
@@ -109,6 +115,7 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
 
         protected Skin(RootPage control) {
             super(control);
+            registerCustomProtocol(); 
 
             // first item in left sidebar
             AccountAdvancedListItem accountListItem = new AccountAdvancedListItem();
@@ -142,6 +149,31 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             gameItem.setTitle(i18n("instance.manage"));
             gameItem.setOnAction(e -> Controllers.navigate(Controllers.getGameListPage()));
             FXUtils.onSecondaryButtonClicked(gameItem, () -> showGameListPopupMenu(gameItem));
+            // --- MULAI KODE CUSTOM SERVER CARD ---
+// Buat kartu server dengan styling mirip TLauncher
+Button playServerBtn = new Button("▶ MAIN SEKARANG");
+playServerBtn.getStyleClass().add("accent-button"); // Pakai class CSS bawaan HMCL
+playServerBtn.setPrefWidth(200);
+playServerBtn.setOnAction(e -> {
+    // Langsung trigger launch ke server Velocity kamu
+    // Ganti "crackednetwork.run.place" dan 11111 dengan IP & Port asli
+    Controllers.navigate(Controllers.getGameListPage());
+});
+
+Label serverNameLabel = new Label("CrackedNetwork Launcher");
+serverNameLabel.getStyleClass().add("title-label");
+serverNameLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
+
+Label playerCountLabel = new Label("🟢 Online: 12/500"); // Bisa diganti dinamis nanti
+playerCountLabel.setStyle("-fx-text-fill: #4CAF50;");
+
+VBox serverCard = new VBox(8, serverNameLabel, playerCountLabel, playServerBtn);
+serverCard.getStyleClass().add("card-pane");
+serverCard.setPadding(new Insets(15));
+serverCard.setAlignment(Pos.CENTER_LEFT);
+// --- SELESAI KODE CUSTOM SERVER CARD --- 
+// TEMPEL WIDGET KE LAYAR UTAMA
+// Ganti 'mainContainer' dengan nama variabel container asli di RootPage.java kamu
 
             // forth item in left sidebar
             AdvancedListItem downloadItem = new AdvancedListItem();
@@ -194,6 +226,7 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
                     .startCategory(i18n("instance").toUpperCase(Locale.ROOT))
                     .add(gameListItem)
                     .add(gameItem)
+                    .add(serverCard)
                     .add(downloadItem)
                     .startCategory(i18n("settings.launcher.general").toUpperCase(Locale.ROOT))
                     .add(launcherSettingsItem)
@@ -216,6 +249,41 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
                     0,
                     getSkinnable().getMainPage().getInstances());
         }
+      private void registerCustomProtocol() {
+    try {
+        String homeDir = System.getProperty("user.home");
+        String jarPath = System.getProperty("java.class.path").split(":")[0];
+        String desktopFile = homeDir + "/.local/share/applications/crackedlauncher.desktop";
+        
+        // Cek apakah sudah terdaftar
+        if (new java.io.File(desktopFile).exists()) return;
+        
+        // Buat file .desktop otomatis
+        String content = "[Desktop Entry]\n" +
+                "Type=Application\n" +
+                "Name=CrackedNetwork Launcher\n" +
+                "Exec=java -jar " + jarPath + " %u\n" +
+                "Icon=minecraft\n" +
+                "Terminal=false\n" +
+                "MimeType=x-scheme-handler/crackedlauncher;\n" +
+                "NoDisplay=true\n" +
+                "Categories=Game;\n";
+                
+        java.nio.file.Files.writeString(java.nio.file.Path.of(desktopFile), content);
+        
+        // Daftarkan ke sistem
+        Runtime.getRuntime().exec(new String[]{
+            "xdg-mime", "default", "crackedlauncher.desktop", "x-scheme-handler/crackedlauncher"
+        });
+        Runtime.getRuntime().exec(new String[]{
+            "update-desktop-database", homeDir + "/.local/share/applications/"
+        });
+        
+        System.out.println("[CrackedLauncher] Custom protocol registered successfully!");
+    } catch (Exception e) {
+        System.err.println("[CrackedLauncher] Failed to register protocol: " + e.getMessage());
+    }
+}
     }
 
 }

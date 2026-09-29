@@ -180,7 +180,7 @@ public final class AccountListPage extends DecoratorAnimatedPage implements Deco
                         wrapper.setPadding(Insets.EMPTY);
                         FXUtils.installFastTooltip(wrapper, i18n("account.login.restricted"));
 
-                        offlineItem.setDisable(true);
+                        offlineItem.setDisable(false);
                         boxAuthServers.setDisable(true);
 
                         boxMethods.getChildren().setAll(title, microsoftItem, wrapper);

@@ -278,6 +278,75 @@ public final class Launcher extends Application {
     }
 
     public static void main(String[] args) {
+        // === AUTO JAVA 17 DETECTION (CrackedNetwork) ===
+        String javaVer = System.getProperty("java.version");
+        int majorVer = 8;
+        if (javaVer.startsWith("1.")) {
+            majorVer = Integer.parseInt(javaVer.substring(2, 3));
+        } else {
+            majorVer = Integer.parseInt(javaVer.split("\\.")[0]);
+        }
+
+        if (majorVer < 17) {
+            java.io.File jvmDir = new java.io.File("/usr/lib/jvm/");
+            java.io.File[] files = jvmDir.listFiles();
+            String bestJava = null;
+            if (files != null) {
+                for (java.io.File f : files) {
+                    if (f.isDirectory() && f.getName().contains("java-17")) {
+                        java.io.File javaBin = new java.io.File(f, "bin/java");
+                        if (javaBin.exists()) {
+                            bestJava = javaBin.getAbsolutePath();
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            if (bestJava != null) {
+                try {
+                    String classPath = System.getProperty("java.class.path").split(java.io.File.pathSeparator)[0];
+                    ProcessBuilder pb = new ProcessBuilder(bestJava, "-jar", classPath);
+                    pb.inheritIO();
+                    pb.start();
+                    System.exit(0);
+                } catch (Exception e) {
+                    System.err.println("[CrackedLauncher] Auto-restart failed: " + e.getMessage());
+                }
+            } else {
+                System.err.println("[CrackedLauncher] CRITICAL: Java 17+ required. Current: " + javaVer);
+                System.err.println("[CrackedLauncher] Please install: sudo apt install openjdk-17-jdk");
+                System.exit(1);
+            }
+        }
+        // === END AUTO JAVA 17 DETECTION ===
+
+        // === AUTO FIX DESKTOP FILE (CrackedNetwork) ===
+        try {
+            String javaBin = System.getProperty("java.home") + java.io.File.separator + "bin" + java.io.File.separator + "java";
+            String userHome = System.getProperty("user.home");
+            String desktopPath = userHome + "/.local/share/applications/crackedlauncher.desktop";
+            java.io.File desktopFile = new java.io.File(desktopPath);
+            
+            if (desktopFile.exists()) {
+                String fileContent = new String(java.nio.file.Files.readAllBytes(desktopFile.toPath()));
+                
+                // Ganti bagian 'Exec=...' dengan path Java yang sedang berjalan (Java 17)
+                fileContent = fileContent.replaceFirst("Exec=\\S+", "Exec=" + javaBin);
+                
+                java.nio.file.Files.write(desktopFile.toPath(), fileContent.getBytes());
+                
+                // Update database desktop agar perubahan langsung terbaca sistem
+                Runtime.getRuntime().exec(new String[]{"update-desktop-database", userHome + "/.local/share/applications/"});
+                
+                System.out.println("[CrackedLauncher] Desktop file updated with Java path: " + javaBin);
+            }
+        } catch (Exception e) {
+            System.err.println("[CrackedLauncher] Failed to fix desktop file: " + e.getMessage());
+        }
+        // === END AUTO FIX DESKTOP FILE ===
+
+
         if (UpdateHandler.processArguments(args)) {
             LOG.shutdown();
             return;

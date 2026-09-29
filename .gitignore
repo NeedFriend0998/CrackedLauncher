@@ -21,3 +21,6 @@ Thumbs.db
 # Dependencies (jika ada)
 node_modules/
 .gradle/
+
+# Minecraft personal data
+.minecraft/

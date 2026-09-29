@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schemas.glavo.site/hmcl/launcher-settings/1.0.0",
+  "selectedGameDirectory": "game-directory:7105bc1f-490e-5e8c-878c-f5844c3d4bc3",
+  "defaultGameSettingsPreset": "game-settings-preset:01a0e3a9-9e2f-7069-ada7-1f29bfe3669a",
+  "selectedInstance": {
+    "game-directory:7105bc1f-490e-5e8c-878c-f5844c3d4bc3": "1.21.1-Fabric"
+  },
+  "selectedAccount": "account:01a0e79a-90dd-7ddb-8ef9-652b1f037083"
+}

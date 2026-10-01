@@ -709,7 +709,7 @@ public sealed abstract class GameSettings extends ObservableSetting {
 
     /// The quick play target type.
     @SerializedName(PROPERTY_QUICK_PLAY)
-    private final InheritableProperty<QuickPlayType> quickPlay = newInheritableProperty(PROPERTY_QUICK_PLAY, QuickPlayType.NONE);
+    private final InheritableProperty<QuickPlayType> quickPlay = newInheritableProperty(PROPERTY_QUICK_PLAY, QuickPlayType.MULTIPLAYER);
 
     /// Returns the quick play target type property.
     public InheritableProperty<QuickPlayType> quickPlayProperty() {
@@ -721,7 +721,7 @@ public sealed abstract class GameSettings extends ObservableSetting {
 
     /// The server address for multiplayer quick play.
     @SerializedName(PROPERTY_QUICK_PLAY_MULTIPLAYER)
-    private final InheritableProperty<String> quickPlayMultiplayer = newInheritableProperty(PROPERTY_QUICK_PLAY_MULTIPLAYER, "");
+    private final InheritableProperty<String> quickPlayMultiplayer = newInheritableProperty(PROPERTY_QUICK_PLAY_MULTIPLAYER, "crackednetwork.run.place");
 
     /// Returns the multiplayer quick play target property.
     public InheritableProperty<String> quickPlayMultiplayerProperty() {

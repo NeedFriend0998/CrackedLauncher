@@ -152,6 +152,8 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             // --- MULAI KODE CUSTOM SERVER CARD ---
 // Buat kartu server dengan styling mirip TLauncher
 Button playServerBtn = new Button("▶ MAIN SEKARANG");
+        playServerBtn.setVisible(false);
+        playServerBtn.setManaged(false);
 playServerBtn.getStyleClass().add("accent-button"); // Pakai class CSS bawaan HMCL
 playServerBtn.setPrefWidth(200);
 playServerBtn.setOnAction(e -> {

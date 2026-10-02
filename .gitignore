@@ -1,0 +1,9 @@
+build/
+.gradle/
+*.jar
+*.class
+.minecraft/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+/*
+ * Hello Cracked Network Server Launcher
+ * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+package org.jackhuang.hmcl.setting.property;
+
+import org.jetbrains.annotations.NotNullByDefault;
+import org.jetbrains.annotations.UnknownNullability;
+
+/// A setting value whose instance override state is stored in `GameSettings.Instance.overrideProperties`.
+///
+/// @author bisma
+@NotNullByDefault
+public interface InheritableProperty<T extends @UnknownNullability Object> extends SettingProperty<T> {
+}

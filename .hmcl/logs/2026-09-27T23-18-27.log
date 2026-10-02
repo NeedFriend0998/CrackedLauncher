@@ -1,0 +1,45 @@
+[23:18:27] [@.util.SelfDependencyPatcher.patch/INFO] Missing JavaFX dependencies, attempting to patch in missing classes
+[23:18:35] [@.util.SelfDependencyPatcher.fetchDependencies/INFO] Downloading https://repo1.maven.org/maven2/org/openjfx/javafx-base/21.0.8/javafx-base-21.0.8-linux.jar
+[23:18:41] [@.util.SelfDependencyPatcher.fetchDependencies/INFO] Downloading https://repo1.maven.org/maven2/org/openjfx/javafx-graphics/21.0.8/javafx-graphics-21.0.8-linux.jar
+[23:18:53] [@.util.SelfDependencyPatcher.fetchDependencies/INFO] Downloading https://repo1.maven.org/maven2/org/openjfx/javafx-controls/21.0.8/javafx-controls-21.0.8-linux.jar
+[23:18:57] [@.util.SelfDependencyPatcher.loadFromCache/INFO]  - Loading dependencies...
+[23:18:57] [@.util.SelfDependencyPatcher.patch/INFO]  - Done!
+[23:18:58] [@.Launcher.main/INFO] *** HMCL 3.17.SNAPSHOT ***
+[23:18:58] [@.Launcher.main/INFO] Operating System: Zorin OS 18.1 (Linux 7.0.0-31-generic)
+[23:18:58] [@.Launcher.main/INFO] System Architecture: x86-64
+[23:18:58] [@.Launcher.main/INFO] Native Encoding: UTF-8
+[23:18:58] [@.Launcher.main/INFO] JNU Encoding: UTF-8
+[23:18:58] [@.Launcher.main/INFO] Java Architecture: x86-64
+[23:18:58] [@.Launcher.main/INFO] Java Version: 17.0.20.1, Ubuntu
+[23:18:58] [@.Launcher.main/INFO] Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+[23:18:58] [@.Launcher.main/INFO] Java Home: /usr/lib/jvm/java-17-openjdk-amd64
+[23:18:58] [@.Launcher.main/INFO] Current Directory: /home/bisma/HMCL
+[23:18:58] [@.Launcher.main/INFO] HMCL User Home: /home/bisma/.local/share/hmcl
+[23:18:58] [@.Launcher.main/INFO] HMCL Local Home: /home/bisma/HMCL/.hmcl
+[23:18:58] [@.Launcher.main/INFO] HMCL Jar Path: /home/bisma/HMCL/HMCL/build/libs/HMCL-3.17.SNAPSHOT.jar
+[23:18:58] [@.Launcher.main/INFO] HMCL Log File: /home/bisma/HMCL/.hmcl/logs/2026-09-27T23-18-27.log
+[23:18:58] [@.Launcher.main/INFO] JVM Max Memory: 1956 MiB
+[23:18:58] [@.Launcher.main/INFO] Metaspace: 20.84 MiB
+[23:18:58] [@.Launcher.main/INFO] Native Backend: None
+[23:18:58] [@.Launcher.main/INFO] XDG Session Type: wayland
+[23:18:58] [@.Launcher.main/INFO] XDG Current Desktop: zorin:GNOME
+[23:18:58] [@.Launcher.main/INFO] Zlib Compatible: true
+[23:18:59] [@.util.platform.SystemInfo.initialize/INFO] System Info:
+ - CPU: Intel Celeron 1000M (2 Cores)
+ - GPU: Intel 3rd Gen Core processor Graphics Controller [Integrated]
+ - Memory: 4.8 GiB / 7.64 GiB (62%)
+[23:18:59] [@.util.FileSaver.saveSync/INFO] Saving file /home/bisma/HMCL/.hmcl/config/game-settings.json
+[23:19:00] [@.util.CrashReporter.uncaughtException/ERROR] Uncaught exception in thread main
+java.lang.UnsupportedOperationException: Unable to load glass GTK library.
+	at javafx.graphics@21.0.8/com.sun.glass.ui.gtk.GtkApplication.lambda$new$5(GtkApplication.java:175)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at javafx.graphics@21.0.8/com.sun.glass.ui.gtk.GtkApplication.<init>(GtkApplication.java:162)
+	at javafx.graphics@21.0.8/com.sun.glass.ui.gtk.GtkPlatformFactory.createApplication(GtkPlatformFactory.java:40)
+	at javafx.graphics@21.0.8/com.sun.glass.ui.Application.run(Application.java:146)
+	at javafx.graphics@21.0.8/com.sun.javafx.tk.quantum.QuantumToolkit.startup(QuantumToolkit.java:290)
+	at javafx.graphics@21.0.8/com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:292)
+	at javafx.graphics@21.0.8/com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:162)
+	at javafx.graphics@21.0.8/com.sun.javafx.application.LauncherImpl.startToolkit(LauncherImpl.java:651)
+	at javafx.graphics@21.0.8/com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:671)
+	at javafx.graphics@21.0.8/com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)
+	at java.base/java.lang.Thread.run(Thread.java:840)

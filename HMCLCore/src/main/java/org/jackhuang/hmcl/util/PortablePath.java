@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ import java.util.Objects;
 /// Relative paths use `/` as their portable separator. Absolute paths are kept as
 /// provided so their platform-specific separators are preserved.
 ///
-/// @author bisma
+/// @author huanghongxun
 @JsonAdapter(PortablePath.Adapter.class)
 @JsonSerializable
 @NotNullByDefault

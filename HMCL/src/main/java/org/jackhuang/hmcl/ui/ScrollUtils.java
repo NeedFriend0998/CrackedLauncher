@@ -136,17 +136,17 @@ final class ScrollUtils {
         smoothScroll(scrollPane, speed, trackPadAdjustment);
     }
 
-    /// @author bisma
+    /// @author huanghongxun
     public static void addSmoothScrolling(VirtualFlow<?> virtualFlow) {
         addSmoothScrolling(virtualFlow, DEFAULT_SPEED);
     }
 
-    /// @author bisma
+    /// @author huanghongxun
     public static void addSmoothScrolling(VirtualFlow<?> virtualFlow, double speed) {
         addSmoothScrolling(virtualFlow, speed, DEFAULT_TRACK_PAD_ADJUSTMENT);
     }
 
-    /// @author bisma
+    /// @author huanghongxun
     public static void addSmoothScrolling(VirtualFlow<?> virtualFlow, double speed, double trackPadAdjustment) {
         smoothScroll(virtualFlow, speed, trackPadAdjustment);
     }
@@ -219,7 +219,7 @@ final class ScrollUtils {
         timeline.setCycleCount(Animation.INDEFINITE);
     }
 
-    /// @author bisma
+    /// @author huanghongxun
     private static void smoothScroll(VirtualFlow<?> virtualFlow, double speed, double trackPadAdjustment) {
         if (!virtualFlow.isVertical())
             return;

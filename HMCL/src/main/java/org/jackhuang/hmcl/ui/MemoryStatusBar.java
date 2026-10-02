@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ import org.jackhuang.hmcl.util.platform.hardware.PhysicalMemoryStatus;
 
 import java.lang.ref.WeakReference;
 
-/// @author bisma
+/// @author huanghongxun
 public final class MemoryStatusBar extends Control {
 
     private static final String DEFAULT_STYLE_CLASS = "memory-status-bar";

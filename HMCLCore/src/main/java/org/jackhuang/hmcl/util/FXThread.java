@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2024 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2024 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ import java.lang.annotation.*;
  * Mark a method that can only be called on the JavaFX Application Thread,
  * or mark a field that can only be read/modified on the JavaFX Application Thread.
  *
- * @author bisma
+ * @author huanghongxun
  */
 @Documented
 @Target({ElementType.METHOD, ElementType.FIELD})

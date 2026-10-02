@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2024 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2024 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import org.jackhuang.hmcl.download.java.JavaRemoteVersion;
 import org.jackhuang.hmcl.util.gson.JsonUtils;
 
 /**
- * @author bisma
+ * @author huanghongxun
  */
 public final class DiscoJavaRemoteVersion implements JavaRemoteVersion {
     @SerializedName("id")

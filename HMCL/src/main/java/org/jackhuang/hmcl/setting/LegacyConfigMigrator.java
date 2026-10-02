@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -54,7 +54,7 @@ import static org.jackhuang.hmcl.util.logging.Logger.LOG;
 /// Those files are now legacy inputs only: migration reads them, writes a new launcher settings file,
 /// and leaves the original files unchanged.
 ///
-/// @author bisma
+/// @author huanghongxun
 @NotNullByDefault
 public final class LegacyConfigMigrator {
     /// The last numeric config version used by the legacy hmcl.json and .hmcl.json files.

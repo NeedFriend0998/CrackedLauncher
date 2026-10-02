@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ import java.util.Objects;
 
 // TODO: We plan to replace ComponentList with this class, but we need to address some issues first
 
-/// @author bisma
+/// @author huanghongxun
 public final class OptionsList extends Control {
     public OptionsList() {
         this.getStyleClass().add("options-list");

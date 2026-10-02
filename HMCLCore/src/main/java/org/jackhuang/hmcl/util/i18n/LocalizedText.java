@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2025 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2025 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ import java.util.*;
 /// The JSON representation accepts either a string or an object. A string is treated as the same text for every
 /// locale, while an object maps language keys, such as `en`, `zh-Hans`, or `default`, to localized text values.
 ///
-/// @author bisma
+/// @author huanghongxun
 @NotNullByDefault
 @JsonAdapter(LocalizedText.Adapter.class)
 @JsonSerializable

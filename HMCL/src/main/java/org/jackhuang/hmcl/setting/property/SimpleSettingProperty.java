@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNullByDefault;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnknownNullability;
 
-/// @author bisma
+/// @author huanghongxun
 @NotNullByDefault
 public class SimpleSettingProperty<T extends @UnknownNullability Object> extends SimpleObjectProperty<T>
         implements SettingProperty<T> {

@@ -125,7 +125,7 @@ public abstract class JFXGenericPickerSkin<T> extends ComboBoxPopupControl<T> {
     private static final VarHandle READ_ONLY_BOOLEAN_PROPERTY_BASE_HELPER =
             findVarHandle(ReadOnlyBooleanPropertyBase.class, "helper", ExpressionHelper.class);
 
-    /// @author bisma
+    /// @author huanghongxun
     private static VarHandle findVarHandle(Class<?> targetClass, String fieldName, Class<?> type) {
         try {
             return MethodHandles.privateLookupIn(targetClass, MethodHandles.lookup()).findVarHandle(targetClass, fieldName, type);

@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2025 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2025 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ import com.sun.jna.PointerType;
 import com.sun.jna.win32.StdCallLibrary;
 import org.jackhuang.hmcl.util.platform.NativeUtils;
 
-/// @author bisma
+/// @author huanghongxun
 public interface Dwmapi extends StdCallLibrary {
     Dwmapi INSTANCE = NativeUtils.USE_JNA && com.sun.jna.Platform.isWindows()
             ? NativeUtils.load("dwmapi", Dwmapi.class)

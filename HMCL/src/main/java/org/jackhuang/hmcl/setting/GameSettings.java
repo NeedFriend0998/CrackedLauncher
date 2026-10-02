@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ import static org.jackhuang.hmcl.util.logging.Logger.LOG;
 
 /// Game launch settings shared by presets and instance-specific overrides.
 ///
-/// @author bisma
+/// @author huanghongxun
 @NotNullByDefault
 public sealed abstract class GameSettings extends ObservableSetting {
     /// Suggested maximum heap memory in MiB.

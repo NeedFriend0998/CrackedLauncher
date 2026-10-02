@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -53,7 +53,7 @@ import java.util.Objects;
 ///
 /// @param value the raw JSON schema string
 /// @param parsed the parsed HMCL schema identifier, or `null` when the string is not parseable
-/// @author bisma
+/// @author huanghongxun
 @JsonSerializable
 @JsonAdapter(JsonSchema.Adapter.class)
 @NotNullByDefault
@@ -411,7 +411,7 @@ public record JsonSchema(String value, @Nullable Parsed parsed) {
     /// @param major the major schema version
     /// @param minor the minor schema version
     /// @param patch the patch schema version
-    /// @author bisma
+    /// @author huanghongxun
     @NotNullByDefault
     public record Version(int major, int minor, int patch) implements Comparable<Version> {
         /// @param major the major schema version

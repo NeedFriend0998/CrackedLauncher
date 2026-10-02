@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2024 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2024 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ import java.util.Optional;
 import static org.jackhuang.hmcl.util.gson.JsonUtils.mapTypeOf;
 
 /**
- * @author bisma
+ * @author huanghongxun
  */
 @JsonAdapter(JavaManifest.Serializer.class)
 public record JavaManifest(JavaInfo info, @Nullable Map<String, Object> update, @Nullable Map<String, JavaLocalFiles.Local> files) {

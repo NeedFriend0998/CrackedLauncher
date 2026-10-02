@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2025 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2025 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import javafx.util.Duration;
 
 import java.util.Objects;
 
-/// @author bisma
+/// @author huanghongxun
 /// @see <a href="https://api.flutter.dev/flutter/animation/Curves-class.html">Flutter Curves</a>
 public final class Motion {
 

@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2025 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2025 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/// @author bisma
+/// @author huanghongxun
 public sealed interface OSVersion {
     OSVersion.Windows WINDOWS_2000 = new Windows(5, 0);
     OSVersion.Windows WINDOWS_XP = new Windows(5, 1);
@@ -149,7 +149,7 @@ public sealed interface OSVersion {
     ///
     /// Note: For Windows version numbers, please use [Windows].
     ///
-    /// @author bisma
+    /// @author huanghongxun
     record Generic(@NotNull OperatingSystem os, @NotNull VersionNumber version) implements OSVersion {
         public Generic {
             Objects.requireNonNull(os);

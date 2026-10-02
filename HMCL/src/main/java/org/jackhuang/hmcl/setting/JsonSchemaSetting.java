@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNullByDefault;
 
 /// Marks a detached settings object that stores its own JSON schema URL.
 ///
-/// @author bisma
+/// @author huanghongxun
 @NotNullByDefault
 interface JsonSchemaSetting {
     /// Returns the schema used by this JSON settings file.

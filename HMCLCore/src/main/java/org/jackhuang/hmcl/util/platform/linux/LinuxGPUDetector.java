@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2025 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2025 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ import java.util.stream.Stream;
 import static org.jackhuang.hmcl.util.logging.Logger.LOG;
 
 /**
- * @author bisma
+ * @author huanghongxun
  * @see <a href="https://github.com/fastfetch-cli/fastfetch/blob/33205326683fd89ec63204f83549839e2374c286/src/detection/gpu/gpu_linux.c">gpu_linux.c</a>
  */
 final class LinuxGPUDetector {

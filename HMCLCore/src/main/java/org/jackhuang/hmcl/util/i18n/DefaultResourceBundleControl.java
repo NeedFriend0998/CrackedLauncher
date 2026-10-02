@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2025 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2025 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ import java.util.ResourceBundle;
 /// - For all supported ISO 639-3 language code (such as `eng`, `zho`, `lzh`, etc.),
 ///  a candidate list with the language code replaced by the ISO 639-1 (Macro)language code is added to the end of the candidate list.
 ///
-/// @author bisma
+/// @author huanghongxun
 public class DefaultResourceBundleControl extends ResourceBundle.Control {
 
     public static final DefaultResourceBundleControl INSTANCE = new DefaultResourceBundleControl();

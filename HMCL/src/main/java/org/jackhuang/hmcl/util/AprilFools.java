@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2026 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2026 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ import static org.jackhuang.hmcl.setting.SettingsManager.settings;
 /// This class provides methods to check if it is April Fools' Day or near April Fools' Day.
 /// It also provides a method to check if April Fools is enabled.
 ///
-/// @author bisma
+/// @author huanghongxun
 public final class AprilFools {
 
     private static final boolean ENABLED;

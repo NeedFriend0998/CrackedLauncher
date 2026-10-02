@@ -1,6 +1,6 @@
 /*
  * Hello Cracked Network Server Launcher
- * Copyright (C) 2024 huangyuhui <bisma@crackednetwork.run.place> and contributors
+ * Copyright (C) 2024 huangyuhui <huanghongxun2008@126.com> and contributors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ import java.util.*;
 
 import static org.jackhuang.hmcl.util.logging.Logger.LOG;
 
-/// @author bisma
+/// @author huanghongxun
 public abstract class ArchiveFileTree<R, E extends ArchiveEntry> implements Closeable {
 
     public static ArchiveFileTree<?, ?> open(Path file) throws IOException {
